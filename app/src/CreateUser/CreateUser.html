@@ -3,14 +3,14 @@
     <md-card>
         <md-card-header>
             <md-card-avatar>
-                <img class="md-user-avatar" src="./assets/img/card-avatar.png" alt="Новый покемон"/>
+                <img class="md-user-avatar" src="./assets/img/card-avatar.png" alt="Новый пользователь"/>
             </md-card-avatar>
             <md-card-header-text>
-                <span class="md-title">Новый покемон</span>
+                <span class="md-title">Новый пользователь</span>
                 <span class="md-subhead">Это хорошо</span>
             </md-card-header-text>
         </md-card-header>
-        <img ng-src="./assets/img/card-bg.jpg" class="md-card-image" alt="Новый покемон">
+        <img ng-src="./assets/img/card-bg.jpg" class="md-card-image" alt="Новый пользователь">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Вот вам форма</span>
@@ -19,28 +19,28 @@
         </md-card-title>
         <md-card-content>
 
-            <form name="pokemonForm" novalidate>
+            <form name="userForm" novalidate>
 
                 <md-input-container class="md-block" flex-gt-xs>
                     <label>Имя</label>
-                    <input ng-model="newPokemon.name" required>
+                    <input ng-model="newUser.name" required>
                 </md-input-container>
 
                 <md-input-container class="md-block" flex-gt-xs>
-                    <label>Вес</label>
-                    <input ng-model="newPokemon.weight">
+                    <label>Логин</label>
+                    <input ng-model="newUser.username">
                 </md-input-container>
 
                 <md-input-container class="md-block" flex-gt-xs>
-                    <label>Рост</label>
-                    <input ng-model="newPokemon.height">
+                    <label>Email</label>
+                    <input ng-model="newUser.email">
                 </md-input-container>
 
-                <md-switch ng-model="newPokemon.active" aria-label="Активен">
+                <md-switch ng-model="newUser.active" aria-label="Активен">
                     Активен
                 </md-switch>
 
-                <md-button class="md-raised md-primary" ng-click="createPokemon(newPokemon)" ng-disabled="pokemonForm.$invalid">Добавить</md-button>
+                <md-button class="md-raised md-primary" ng-click="createUser(newUser)" ng-disabled="userForm.$invalid">Добавить</md-button>
 
             </form>
 

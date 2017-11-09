@@ -1,34 +1,34 @@
 'use strict';
 
-pokemonApp.controller('PokemonDetailCtrl', function($scope, $routeParams, PokemonsService) {
+userApp.controller('UserDetailCtrl', function($scope, $routeParams, UsersService) {
 
-    $scope.pokemonLoaded = false;
+    $scope.userLoaded = false;
 
-    $scope.pokemon = PokemonsService.get({
-        pokemonId: $routeParams['pokemonId']
+    $scope.user = UsersService.get({
+        userId: $routeParams['userId']
     }, function(successResult) {
         // Окей!
         $scope.notfoundError = false;
-        $scope.pokemonLoaded = true;
+        $scope.userLoaded = true;
 
         $scope.activeTab = 1;
         $scope.disableControlTab = true;
     }, function(errorResult) {
         // Не окей..
         $scope.notfoundError = true;
-        $scope.pokemonLoaded = true;
+        $scope.userLoaded = true;
 
 
     });
 
-    $scope.pokemon.$promise.then(function(result) {
-        //$scope.pokemonLoaded = true;
+    $scope.user.$promise.then(function(result) {
+        //$scope.userLoaded = true;
     });
 
-    $scope.deletePokemon = function(pokemonId) {
+    $scope.deleteUser = function(userId) {
 
-        $scope.pokemon.$delete({
-            pokemonId: pokemonId
+        $scope.user.$delete({
+            userId: userId
         }, function(successResult) {
             // Окей!
             $scope.deletionSuccess = true;
