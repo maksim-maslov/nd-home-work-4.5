@@ -11,8 +11,9 @@ module('UserApp')
             template: '<user-list></user-list>'
         }).
         when('/users/:userId', {
-            templateUrl: 'src/UserDetail/UserDetail.html',
-            controller: 'UserDetailCtrl'
+            template: '<user-detail></user-detail>'
+            // templateUrl: 'src/UserDetail/UserDetail.html',
+            // controller: 'UserDetailCtrl'
         }).
         when('/edit/:userId', {
             templateUrl: 'src/EditUser/EditUser.html',
